@@ -7,10 +7,18 @@ An ASRS report is filed by pilots or staff of an aircraft when an anomaly is enc
 A sample Anomaly / Narrative looks like this:
 
     Anomaly: 
-    deviation - altitude excursion from assigned altitude. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural other, unknown. other similar soonding call signs
+    deviation - altitude excursion from assigned altitude. deviation, discrepancy - procedural clearance. 
+    deviation, discrepancy - procedural other, unknown. 
+    other similar soonding call signs
     
     Narrative: 
-    we started to dsnd from 15000 ft to 11000 ft. about 13500 ft, apch asked our alt. we responded 13500 ft to 11000 ft. he said we were supposed to be at 15000 ft. he clred us to 13000 ft. no conflicts, as far as we know. in the next few mins, we discovered we read a clrnc for someone else in our company. the misunderstanding resolved in our number being abc while company bc was on same freq. company bc thought the call was for us too, and had remained at their alt. it would help if flt numbers did not end in the same number.
+    we started to dsnd from 15000 ft to 11000 ft. about 13500 ft, apch asked our alt. 
+    we responded 13500 ft to 11000 ft. he said we were supposed to be at 15000 ft. 
+    he clred us to 13000 ft. no conflicts, as far as we know. in the next few mins, 
+    we discovered we read a clrnc for someone else in our company. the misunderstanding 
+    resolved in our number being abc while company bc was on same freq. company bc thought 
+    the call was for us too, and had remained at their alt. it would help if flt numbers 
+    did not end in the same number.
 
 ### The Dataset
 This project uses an ASRS dataset from kaggle found here:
