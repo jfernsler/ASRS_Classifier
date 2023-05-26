@@ -32,6 +32,7 @@ def get_clean_data(save=False):
 
     return data
 
+
 def save_test_train_data():
     data = pd.read_pickle(os.path.join(PICKLE_DATA,'asrs_cluster_labels.pkl'))
     print(data.head())
@@ -57,11 +58,13 @@ def make_anomaly_chart(df, save=False):
     plt.savefig(os.path.join(CHART_DIR, 'unique_anomalies.png'), bbox_inches='tight', dpi=300)
     plt.show()
 
+
 def test_pickle_zip():
     train = pickle_unzip(os.path.join(PICKLE_DATA, 'asrs_data_clean_2000_train.pkl.zip'))
     test = pickle_unzip(os.path.join(PICKLE_DATA, 'asrs_data_clean_2000_test.pkl.zip'))
     print(train.shape)
     print(test.shape)
+
 
 def test_loader():
     test = ASRSTestLoader()
@@ -69,6 +72,7 @@ def test_loader():
 
     print(test.data.shape)
     print(test.asrs.shape)
+
 
 def zip_training():
     print('load pre-processed train data...')
