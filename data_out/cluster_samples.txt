@@ -1,0 +1,257 @@
+Printing 15 samples from each of 15 clusters
+
+Cluster 0:
+aircraft equipment problem less severe. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem critical. deviation - altitude overshoot. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem less severe. deviation, discrepancy - procedural maintenance. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem critical. deviation - track, heading all types.
+aircraft equipment problem less severe. deviation, discrepancy - procedural published material, policy. flight deck, cabin, aircraft event smoke, fire, fumes, odor.
+aircraft equipment problem less severe. deviation, discrepancy - procedural maintenance.
+aircraft equipment problem less severe. deviation - track, heading all types. deviation, discrepancy - procedural clearance.
+aircraft equipment problem less severe. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem less severe. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem less severe. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem less severe. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem critical. deviation - altitude overshoot.
+aircraft equipment problem less severe. deviation, discrepancy - procedural published material, policy. flight deck, cabin, aircraft event smoke, fire, fumes, odor.
+aircraft equipment problem critical. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem less severe. deviation, discrepancy - procedural published material, policy.
+
+Cluster 1:
+conflict nmac. deviation - track, heading all types. deviation, discrepancy - procedural clearance.
+conflict ground conflict. less severe. deviation, discrepancy - procedural published material, policy. ground event, encounter loss of aircraft control.
+conflict ground conflict. critical. deviation, discrepancy - procedural published material, policy. ground event, encounter loss of aircraft control.
+conflict airborne conflict. deviation - altitude overshoot. deviation - track, heading all types. deviation, discrepancy - procedural published material, policy. inflight event, encounter weather, turbulence.
+conflict airborne conflict. deviation, discrepancy - procedural published material, policy. inflight event, encounter cftt, cfit.
+conflict airborne conflict. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural far.
+conflict airborne conflict. deviation - altitude excursion from assigned altitude. deviation, discrepancy - procedural clearance. inflight event, encounter cftt, cfit.
+conflict ground conflict. critical. conflict nmac. deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy.
+conflict airborne conflict. deviation, discrepancy - procedural published material, policy.
+conflict ground conflict. less severe. deviation, discrepancy - procedural published material, policy. inflight event, encounter cftt, cfit.
+conflict ground conflict. less severe. deviation, discrepancy - procedural published material, policy. ground incursion runway.
+conflict airborne conflict. deviation - altitude overshoot. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural published material, policy.
+conflict ground conflict. critical. deviation - altitude excursion from assigned altitude. deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy. ground event, encounter ground strike - aircraft. ground incursion runway.
+conflict airborne conflict. deviation - track, heading all types. deviation, discrepancy - procedural clearance.
+conflict ground conflict. critical. deviation, discrepancy - procedural published material, policy. ground event, encounter ground equipment issue.
+
+Cluster 2:
+aircraft equipment problem critical.
+aircraft equipment problem critical.
+aircraft equipment problem critical.
+aircraft equipment problem critical.
+aircraft equipment problem critical.
+aircraft equipment problem critical. flight deck, cabin, aircraft event other, unknown. inflight event, encounter weather, turbulence. inflight event, encounter other, unknown. other gnd crew staffing.
+aircraft equipment problem critical. other lost com.
+aircraft equipment problem critical.
+aircraft equipment problem critical. inflight event, encounter fuel issue.
+aircraft equipment problem critical.
+aircraft equipment problem critical.
+aircraft equipment problem critical.
+aircraft equipment problem critical.
+aircraft equipment problem critical. ground event, encounter other, unknown.
+aircraft equipment problem critical.
+
+Cluster 3:
+deviation, discrepancy - procedural weight and balance. deviation, discrepancy - procedural published material, policy.
+deviation, discrepancy - procedural hazardous material violation. deviation, discrepancy - procedural published material, policy.
+deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy. flight deck, cabin, aircraft event illness, injury.
+deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural far. other crew not informed a test flt was supposed to take place.
+deviation - track, heading all types. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural published material, policy.
+deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy.
+deviation - track, heading all types. deviation, discrepancy - procedural clearance.
+deviation - track, heading all types. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural published material, policy. inflight event, encounter weather, turbulence.
+deviation, discrepancy - procedural hazardous material violation. deviation, discrepancy - procedural published material, policy.
+deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural far.
+deviation, discrepancy - procedural far. deviation, discrepancy - procedural hazardous material violation. deviation, discrepancy - procedural published material, policy.
+deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural security. flight deck, cabin, aircraft event passenger misconduct.
+deviation - altitude overshoot. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy.
+deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy. flight deck, cabin, aircraft event passenger misconduct.
+deviation - track, heading all types. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural published material, policy.
+
+Cluster 4:
+atc issue all types. deviation, discrepancy - procedural published material, policy.
+atc issue all types. conflict ground conflict. critical. deviation, discrepancy - procedural clearance. ground incursion runway.
+atc issue all types. conflict airborne conflict. deviation, discrepancy - procedural published material, policy.
+atc issue all types. conflict airborne conflict. deviation, discrepancy - procedural published material, policy.
+atc issue all types. conflict ground conflict. less severe.
+atc issue all types. deviation, discrepancy - procedural published material, policy.
+atc issue all types. conflict airborne conflict.
+atc issue all types. airspace violation all types. deviation, discrepancy - procedural published material, policy.
+atc issue all types. airspace violation all types. conflict airborne conflict. deviation, discrepancy - procedural published material, policy.
+atc issue all types. deviation, discrepancy - procedural published material, policy.
+atc issue all types. aircraft equipment problem less severe. deviation, discrepancy - procedural published material, policy.
+atc issue all types. aircraft equipment problem critical. deviation, discrepancy - procedural clearance.
+atc issue all types. airspace violation all types.
+atc issue all types. conflict airborne conflict. deviation, discrepancy - procedural published material, policy.
+atc issue all types. conflict nmac. deviation, discrepancy - procedural published material, policy.
+
+Cluster 5:
+inflight event, encounter other, unknown.
+flight deck, cabin, aircraft event illness, injury. flight deck, cabin, aircraft event passenger misconduct.
+inflight event, encounter other, unknown. inflight event, encounter weather, turbulence. other low fuel state.
+inflight event, encounter other, unknown.
+inflight event, encounter weather, turbulence.
+inflight event, encounter weather, turbulence. inflight event, encounter unstabilized approach. inflight event, encounter cftt, cfit.
+ground event, encounter other, unknown.
+flight deck, cabin, aircraft event illness, injury.
+inflight event, encounter cftt, cfit.
+other ops planning.
+flight deck, cabin, aircraft event smoke, fire, fumes, odor.
+ground event, encounter ground strike - aircraft. ground event, encounter loss of aircraft control. ground excursion taxiway.
+ground event, encounter other, unknown. no specific anomaly occurred unwanted situation.
+ground event, encounter aircraft. ground incursion taxiway.
+ground event, encounter ground strike - aircraft.
+
+Cluster 6:
+deviation, discrepancy - procedural published material, policy.
+deviation, discrepancy - procedural published material, policy.
+conflict nmac. deviation, discrepancy - procedural far.
+deviation, discrepancy - procedural published material, policy. flight deck, cabin, aircraft event other, unknown.
+deviation, discrepancy - procedural far. other acft to atc communications.
+deviation, discrepancy - procedural published material, policy. inflight event, encounter cftt, cfit.
+deviation, discrepancy - procedural clearance.
+deviation, discrepancy - procedural far.
+conflict nmac. deviation, discrepancy - procedural published material, policy.
+deviation, discrepancy - procedural published material, policy.
+deviation, discrepancy - procedural published material, policy. other overwt acft.
+conflict nmac. deviation, discrepancy - procedural published material, policy.
+conflict nmac. deviation, discrepancy - procedural published material, policy.
+deviation, discrepancy - procedural published material, policy. inflight event, encounter cftt, cfit.
+deviation, discrepancy - procedural published material, policy. inflight event, encounter fuel issue.
+
+Cluster 7:
+aircraft equipment problem critical. deviation, discrepancy - procedural published material, policy. flight deck, cabin, aircraft event smoke, fire, fumes, odor.
+aircraft equipment problem less severe. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural mel, cdl. deviation, discrepancy - procedural far. inflight event, encounter fuel issue.
+aircraft equipment problem critical. deviation, discrepancy - procedural far. deviation, discrepancy - procedural maintenance. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem critical. deviation, discrepancy - procedural far. deviation, discrepancy - procedural maintenance. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem less severe. deviation - altitude crossing restriction not met. deviation - altitude undershoot. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural mel, cdl. deviation, discrepancy - procedural far. deviation, discrepancy - procedural clearance. inflight event, encounter weather, turbulence. other exp lvl tech flying.
+aircraft equipment problem critical. deviation - track, heading all types. deviation, discrepancy - procedural clearance. ground excursion runway. inflight event, encounter loss of aircraft control.
+aircraft equipment problem critical. deviation, discrepancy - procedural far. deviation, discrepancy - procedural maintenance. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem critical. deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy. other crew coord-fuel mgmnt.
+aircraft equipment problem critical. deviation, discrepancy - procedural far. deviation, discrepancy - procedural maintenance. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem critical. deviation, discrepancy - procedural mel, cdl. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem critical. deviation, discrepancy - procedural far. deviation, discrepancy - procedural maintenance. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem critical. deviation, discrepancy - procedural published material, policy. flight deck, cabin, aircraft event smoke, fire, fumes, odor.
+aircraft equipment problem critical. deviation - altitude excursion from assigned altitude. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural clearance. inflight event, encounter loss of aircraft control.
+aircraft equipment problem critical. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural far. deviation, discrepancy - procedural maintenance. inflight event, encounter bird, animal.
+aircraft equipment problem critical. deviation, discrepancy - procedural mel, cdl. deviation, discrepancy - procedural maintenance.
+
+Cluster 8:
+deviation - altitude overshoot. deviation, discrepancy - procedural clearance.
+deviation, discrepancy - procedural other, unknown. ground incursion runway.
+deviation, discrepancy - procedural published material, policy. ground event, encounter ground strike - aircraft. ground excursion runway. inflight event, encounter loss of aircraft control.
+deviation - altitude excursion from assigned altitude. deviation - speed all types. inflight event, encounter loss of aircraft control. inflight event, encounter weather, turbulence.
+deviation - altitude crossing restriction not met. deviation - track, heading all types. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural published material, policy.
+deviation - altitude excursion from assigned altitude. deviation - speed all types. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural clearance. inflight event, encounter weather, turbulence.
+deviation - altitude crossing restriction not met. deviation - altitude overshoot. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural published material, policy.
+deviation - altitude excursion from assigned altitude. deviation, discrepancy - procedural clearance. inflight event, encounter weather, turbulence. inflight event, encounter other, unknown. other flaps at apch setting ie hard to keep nose down.
+deviation - altitude excursion from assigned altitude. deviation, discrepancy - procedural clearance. inflight event, encounter weather, turbulence.
+deviation, discrepancy - procedural other, unknown. flight deck, cabin, aircraft event other, unknown. inflight event, encounter weather, turbulence.
+deviation, discrepancy - procedural published material, policy. ground event, encounter loss of aircraft control. ground excursion runway. inflight event, encounter weather, turbulence.
+deviation - altitude crossing restriction not met. deviation - altitude overshoot. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural clearance.
+deviation - altitude overshoot. inflight event, encounter weather, turbulence. inflight event, encounter wake vortex encounter.
+deviation, discrepancy - procedural far. deviation, discrepancy - procedural landing without clearance. inflight event, encounter weather, turbulence.
+deviation, discrepancy - procedural clearance. ground incursion runway. inflight event, encounter wake vortex encounter.
+
+Cluster 9:
+conflict ground conflict. less severe. ground event, encounter other, unknown. ground event, encounter person, animal, bird.
+conflict airborne conflict. inflight event, encounter other, unknown.
+conflict ground conflict. less severe. other atc equip malfunction.
+conflict airborne conflict.
+conflict ground conflict. critical.
+conflict airborne conflict.
+conflict airborne conflict.
+conflict ground conflict. critical. ground incursion runway.
+conflict ground conflict. critical. ground event, encounter vehicle.
+conflict ground conflict. critical.
+conflict airborne conflict.
+conflict airborne conflict.
+conflict airborne conflict.
+conflict nmac. conflict airborne conflict.
+conflict airborne conflict.
+
+Cluster 10:
+conflict nmac.
+conflict nmac.
+conflict nmac.
+conflict nmac.
+conflict nmac.
+conflict nmac.
+conflict nmac.
+conflict nmac. other airspace delegation and trng activities.
+conflict nmac.
+conflict nmac.
+conflict nmac.
+conflict nmac.
+conflict nmac.
+conflict nmac.
+conflict nmac.
+
+Cluster 11:
+airspace violation all types. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural far. deviation, discrepancy - procedural landing without clearance. inflight event, encounter vfr in imc. inflight event, encounter weather, turbulence.
+aircraft equipment problem less severe. airspace violation all types. deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy.
+airspace violation all types. deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy. inflight event, encounter weather, turbulence.
+airspace violation all types. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural published material, policy.
+airspace violation all types. conflict nmac. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural unauthorized flight operations (uas). deviation, discrepancy - procedural far.
+airspace violation all types. deviation - track, heading all types. deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy.
+aircraft equipment problem less severe. airspace violation all types. deviation - track, heading all types. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural far. deviation, discrepancy - procedural clearance. other prox of restr.
+airspace violation all types. conflict nmac. deviation, discrepancy - procedural far.
+airspace violation all types. deviation, discrepancy - procedural far. inflight event, encounter weather, turbulence. inflight event, encounter vfr in imc.
+airspace violation all types. deviation - track, heading all types. deviation, discrepancy - procedural clearance.
+airspace violation all types. deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy.
+airspace violation all types. deviation - track, heading all types. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural far.
+airspace violation all types. deviation, discrepancy - procedural far.
+airspace violation all types. deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy.
+airspace violation all types. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural far. deviation, discrepancy - procedural published material, policy. other xponder code/ mode c.
+
+Cluster 12:
+atc issue all types. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural published material, policy. inflight event, encounter loss of aircraft control. inflight event, encounter weather, turbulence.
+atc issue all types. deviation, discrepancy - procedural published material, policy. inflight event, encounter cftt, cfit.
+atc issue all types. airspace violation all types. deviation - altitude undershoot. deviation, discrepancy - procedural published material, policy. inflight event, encounter cftt, cfit.
+atc issue all types. deviation - track, heading all types. deviation, discrepancy - procedural clearance.
+atc issue all types. deviation - track, heading all types. deviation, discrepancy - procedural clearance.
+atc issue all types. aircraft equipment problem less severe. deviation - track, heading all types. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural clearance.
+atc issue all types. deviation - speed all types. deviation, discrepancy - procedural clearance. inflight event, encounter wake vortex encounter.
+atc issue all types. conflict airborne conflict. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural clearance.
+atc issue all types. deviation, discrepancy - procedural clearance.
+atc issue all types. conflict airborne conflict. deviation - track, heading all types. deviation, discrepancy - procedural clearance.
+atc issue all types. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural far. inflight event, encounter weather, turbulence.
+atc issue all types. deviation, discrepancy - procedural clearance. deviation, discrepancy - procedural published material, policy.
+atc issue all types. aircraft equipment problem less severe. deviation - track, heading all types. deviation, discrepancy - procedural clearance.
+atc issue all types. deviation - track, heading all types. inflight event, encounter weather, turbulence.
+atc issue all types. aircraft equipment problem critical. deviation - altitude excursion from assigned altitude. deviation, discrepancy - procedural published material, policy.
+
+Cluster 13:
+aircraft equipment problem less severe.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe. flight deck, cabin, aircraft event illness, injury. flight deck, cabin, aircraft event smoke, fire, fumes, odor.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe. deviation - track, heading all types. inflight event, encounter vfr in imc.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe.
+aircraft equipment problem less severe.
+
+Cluster 14:
+atc issue all types. conflict nmac. deviation, discrepancy - procedural far. other non detect by ctr radar.
+atc issue all types. inflight event, encounter fuel issue.
+atc issue all types.
+other egpws.
+atc issue all types. inflight event, encounter weather, turbulence. inflight event, encounter fuel issue.
+atc issue all types. ground incursion runway.
+other freq saturation.
+other parallel rwy dep proc.
+no specific anomaly occurred all types.
+atc issue all types. conflict nmac.
+atc issue all types.
+no specific anomaly occurred all types.
+no specific anomaly occurred all types.
+atc issue all types.
+atc issue all types. conflict nmac.
+
