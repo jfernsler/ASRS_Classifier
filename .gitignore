@@ -6,7 +6,9 @@ __pycache__/
 # big folders
 data/raw/*
 data/pickle_data/*
-data/clean/*
+data/clean/asrs_data_clean_2000_train.csv
+data/clean/asrs_data_clean_2000.csv
+
 models/*
 
 # C extensions
