@@ -3,13 +3,27 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# big folders
-data/raw/*
-data/pickle_data/*
+# unecesary data
+data/raw/AviationSafetyReportingSystem/
+data/raw/asrs.csv
+
+data/pickle_data/asrs_label_embeddings.pkl.zip
+data/pickle_data/asrs_cluster_centers.pkl.zip
+
+data/pickle_data/asrs_cluster_labels.pkl.zip
+data/pickle_data/asrs_data_clean_2000_train.pkl.zip
+
+data/pickle_data/asrs_HF_test.pkl.zip
+data/pickle_data/asrs_HF_train.pkl.zip
+
 data/clean/asrs_data_clean_2000_train.csv
 data/clean/asrs_data_clean_2000.csv
 
+
+
 models/*
+
+
 
 # C extensions
 *.so

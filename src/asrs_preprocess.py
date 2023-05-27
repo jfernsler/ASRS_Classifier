@@ -1,12 +1,9 @@
 from transformers import AutoTokenizer
 from datasets import Dataset, Features, Value, ClassLabel
 
-from jf_nlp.nlp_dataloaders import ASRSPickleLoader, ASRSTestLoader, ASRSTrainLoader
+from jf_nlp.nlp_dataloaders import ASRSTestLoader, ASRSTrainLoader
 from jf_nlp.nlp_globals import *
 from jf_nlp.utils import pickle_zip
-from sklearn.model_selection import train_test_split
-
-import pandas as pd
 
 model_checkpoint = "distilbert-base-uncased"
 batch_size = 16
@@ -34,22 +31,6 @@ def rebuild_encodings():
 
     tokenized_train = train_dataset.map(preprocess_function)
     pickle_zip(tokenized_train, os.path.join(PICKLE_DATA,'asrs_HF_train.pkl.zip'))
-
-
-def test_encodings(train_ratio = 0.08):
-    asrs = ASRSPickleLoader()
-    # split the data into train and test sets
-    train, test = train_test_split(asrs.data, train_size=train_ratio, random_state=42)
-
-    test_position = 123
-
-    print(test.iloc[test_position]['Narrative'])
-    print(test.iloc[test_position]['cluster'])
-    print()
-    print(tokenizer(test.iloc[test_position]['Narrative'], padding="max_length", truncation=True))
-    print()
-    test_embeddings = pd.read_pickle(os.path.join(PICKLE_DATA, 'asrs_encoded_test.pkl'))
-    print(test_embeddings.iloc[test_position])
 
 if __name__ == '__main__':
     rebuild_encodings()

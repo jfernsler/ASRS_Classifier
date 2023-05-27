@@ -1,22 +1,11 @@
 import argparse, sys, random
 
 from jf_nlp.nlp_dataloaders import ASRSTestLoader
-from asrs_multi_infer import infer_one, infer_many
-
-def print_dict(data_dict):
-    for k,v in data_dict.items():
-        print(f'{k}:', end='', flush=True)
-        for n, char in enumerate(str(v)):
-            if n % 60 == 0:
-                print('\n\t', end='', flush=True)
-            print(char, end='', flush=True)
-        print()
-        print()
+from asrs_infer import infer_one, infer_many
 
 def main(args):
     if args.test_dataset:
         print('*'*10, ' Test Dataset ', '*'*10, '\n')
-
         test = ASRSTestLoader()
         rand_idx = random.randint(0, len(test.data))
         data_dict = test.asrs.iloc[rand_idx].to_dict()
@@ -31,6 +20,17 @@ def main(args):
     elif args.predict_many:
         print('*'*10, ' Predict Many ', '*'*10)
         infer_many(args.predict_many)
+
+
+def print_dict(data_dict):
+    for k,v in data_dict.items():
+        print(f'{k}:', end='', flush=True)
+        for n, char in enumerate(str(v)):
+            if n % 60 == 0:
+                print('\n\t', end='', flush=True)
+            print(char, end='', flush=True)
+        print()
+        print()
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description='CS614 Assignment 3 - Language Classifier')
