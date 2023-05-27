@@ -29,6 +29,8 @@ https://www.kaggle.com/datasets/andrewda/aviation-safety-reporting-system
 ## Data Cleanup
 For training I used only data from the year 2000 and on - which contains over 125,000 entries. Text was cast to lower case and some punctuation was converted and removed. Furthermore I am only using the Narratives and Anomalies in the project. 
 
+Included in this repository are only the test datasets for size considerations.
+
 ### Clustering
 The reduced data contains nearly 40,000 unique anomaly listings. These were all converted to text embeddings (using a BERT model) and clustered with KMeans by similarity into 15 groups. These groups (named 0-14) were used as labels for the narrative data.
 

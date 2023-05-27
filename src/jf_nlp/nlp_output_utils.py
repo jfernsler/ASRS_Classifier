@@ -49,7 +49,7 @@ def print_results(index, text, y, yhat, confidence):
 
 
 def plot_clusters(embeddings, labels, num_clusters = 15, dark_mode = False, perplex = 50, n_iter = 2000, show=False, pt_count=15000):
-    """Plots a 3D scatter plot of the clusters."""
+    """Plots a 3D scatter plot of the clusters. Requires the embeddings and labels from the model."""
     embeddings = embeddings[:pt_count]
     labels = labels[:pt_count]
 
