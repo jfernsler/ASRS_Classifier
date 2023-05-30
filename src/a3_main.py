@@ -6,11 +6,13 @@ from asrs_infer import infer_one, infer_many
 def main(args):
     if args.test_dataset:
         print('*'*10, ' Test Dataset ', '*'*10, '\n')
+        idx = int(args.test_dataset)
         test = ASRSTestLoader()
-        rand_idx = random.randint(0, len(test.data))
-        data_dict = test.asrs.iloc[rand_idx].to_dict()
+        if idx == -1:
+            idx = random.randint(0, len(test.data))
+        data_dict = test.asrs.iloc[idx].to_dict()
         print()
-        print(f'Index: {rand_idx}')
+        print(f'Index: {idx}')
         print_dict(data_dict)
 
     elif args.predict_one:
@@ -39,10 +41,10 @@ def print_dict(data_dict):
 
 
 if __name__=='__main__':
-    parser = argparse.ArgumentParser(description='CS614 Assignment 3 - Language Classifier')
+    parser = argparse.ArgumentParser(description='CS614 Assignment 3 - ASRS Language Classifier')
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument('-d', '--test_dataset', 
-                        action='store_true', help='View a randomly selected data member from the Test Dataset')
+    group.add_argument('-d', '--test_dataset', nargs='?', const='-1',
+                        action='store', help='Given no index number, view a randomly selected data member from the Test Dataset')
     group.add_argument('-po', '--predict_one', nargs='?', const='-1',
                         action='store', help='Given no index number, predict a random narrative. Given an index number, predict that narrative.')
     group.add_argument('-pm', '--predict_many', const='10', nargs='?',

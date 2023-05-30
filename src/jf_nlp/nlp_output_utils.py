@@ -42,11 +42,12 @@ def make_matrix(y_true, y_pred, classes, title, figure_path, save=True):
         plt.show()
 
 
-def print_results(index, text, y, yhat, confidence, data=None):
+def print_results(index, text, y, yhat, confidence, anomaly):
     """Prints the results of a single inference."""
     print('\n', '='*80)
     print('\nNarrative at index {}:\n'.format(index), text)
-    print('\nTrue Label:', y)
+    print('\nAnomaly:\n', anomaly)
+    print('\n\nTrue Label:', y)
     print('Predicted Label: {} (Confidence: {:.2f})'.format(yhat, confidence))
     print('\n', '='*80)
 

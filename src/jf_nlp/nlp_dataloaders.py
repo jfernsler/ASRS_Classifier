@@ -77,6 +77,7 @@ class ASRSLoader():
         #self.asrs = pd.read_pickle(os.path.join(PICKLE_DATA,'asrs_cluster_labels.pkl'))
         self.data = self.asrs.copy()
         self.reduce_columns()
+        print('{} ASRS Records Loaded'.format(self.data.shape[0]))
 
 
     def reduce_columns(self):

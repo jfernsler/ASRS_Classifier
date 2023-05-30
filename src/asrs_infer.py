@@ -39,6 +39,8 @@ def infer_many(count = 10, display = True, chart = False, checkpoint=MODEL_BEST_
 
         yhat_list.append(int(result[0]['label']))
         confidence = result[0]['score']
+        anomaly = asrs.asrs.iloc[idx]['Anomaly']
+
 
         if y_list[-1] == yhat_list[-1]:
             correct_count += 1
@@ -48,7 +50,7 @@ def infer_many(count = 10, display = True, chart = False, checkpoint=MODEL_BEST_
             random_count += 1
 
         if display:
-            print_results(idx, element['text'], y_list[-1], yhat_list[-1], confidence)
+            print_results(idx, element['text'], y_list[-1], yhat_list[-1], confidence, anomaly)
         else:
             print(r_marker, end='', flush=True)
             if (n+1) % 100 == 0:
@@ -81,8 +83,9 @@ def infer_one(idx=None, checkpoint=MODEL_BEST_CHECKPOINT):
         idx = random.randrange(len(asrs))
 
     element = asrs[idx]
+    anomaly = asrs.asrs.iloc[idx]['Anomaly']
     result = classifier(element['text'], padding=True, truncation=True, max_length=512)
-    print_results(idx, element['text'], int(element['label']), int(result[0]['label']), result[0]['score'])
+    print_results(idx, element['text'], int(element['label']), int(result[0]['label']), result[0]['score'], anomaly)
 
 
 if __name__ == '__main__':

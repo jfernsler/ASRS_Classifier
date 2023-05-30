@@ -32,13 +32,10 @@ For training I used only data from the year 2000 and on - which contains over 12
 Included in this repository are only the test datasets for size considerations.
 
 ### Clustering
-The reduced data contains nearly 40,000 unique anomaly listings. These were all converted to text embeddings (using a BERT model) and clustered with KMeans by similarity into 15 groups. These groups (named 0-14) were used as labels for the narrative data.
+The reduced data contains nearly 40,000 unique anomaly listings/combinations. These were all converted to text embeddings (using a distilBERT model) and clustered with KMeans by similarity into 15 groups. These groups (named 0-14) were used as labels for the narrative data.
 
 ### Classification
 Finally the narrative data was used to fine tune a BERT classifer on the 15 labels.
 
 ### Results
 Given limited hardware and training time, the model achieves roughly 50% success rate in classifications. Random choice across 15 labels would yield 6.6% success. 
-
-
-
