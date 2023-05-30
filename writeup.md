@@ -13,10 +13,14 @@ The distilBERT model was chosen for it's size and speed - it's also well suited 
 example 1 - Inference at narrative index 123 (```a3_main.py -po 123```):
 ```
 Narrative at index 123:
- on may/mon/04, given job case 32-96-50 to replace #2 tire. removed and replaced tire, torqued and spun tire. installed lock screws and safetied.
+ on may/mon/04, given job case 32-96-50 to replace #2 tire. 
+ removed and replaced tire, torqued and spun tire. installed 
+ lock screws and safetied.
 
 Anomaly:
- aircraft equipment problem critical. deviation, discrepancy - procedural far. deviation, discrepancy - procedural maintenance. deviation, discrepancy - procedural published material, policy.
+ aircraft equipment problem critical. deviation, discrepancy - 
+ procedural far. deviation, discrepancy - procedural maintenance. 
+ deviation, discrepancy - procedural published material, policy.
 
 True Label: 7
 Predicted Label: 7 (Confidence: 0.93)
@@ -34,7 +38,16 @@ ___
 example 2 - Inference at narrative index 55 (```a3_main.py -po 55```):
 ```
 Narrative at index 55:
- first officer was on base leg to btv and descending to traffic pattern altitude (tpa) of 1;800 ft msl when passing through 2;000 ft msl, the egpws 'terrain' aural alert was issued. the first officer stopped the descent and initiated a shallow climb to clear the aural alert, leveled momentarily, then resumed the scheduled descent to the field with no further incident. both the captain and first officer verified that no terrain on the mfd was in conflict with the aircraft and a visual check of the surrounding terrain was verified. no further alerts were issued and the approach was completed per normal company profile.
+ first officer was on base leg to btv and descending to traffic 
+ pattern altitude (tpa) of 1;800 ft msl when passing through 2;000 ft 
+ msl, the egpws 'terrain' aural alert was issued. the first officer 
+ stopped the descent and initiated a shallow climb to clear the aural 
+ alert, leveled momentarily, then resumed the scheduled descent to 
+ the field with no further incident. both the captain and first 
+ officer verified that no terrain on the mfd was in conflict with 
+ the aircraft and a visual check of the surrounding terrain was 
+ verified. no further alerts were issued and the approach was completed 
+ per normal company profile.
 
 Anomaly:
  aircraft equipment problem less severe.
