@@ -33,7 +33,7 @@ Here the narrative is being correctly assesed into the anomaly cluster '7'. Here
 * aircraft equipment problem critical. deviation, discrepancy - procedural far. deviation, discrepancy - procedural maintenance. deviation, discrepancy - procedural published material, policy.
 * aircraft equipment problem less severe. deviation - altitude crossing restriction not met. deviation - altitude undershoot. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural mel, cdl. deviation, discrepancy - procedural far. deviation, discrepancy - procedural clearance. inflight event, encounter weather, turbulence. other exp lvl tech flying
 
-The model is correctly assess the narrative as an equipment problem. Additionally one can see how the combination of anomaly selections can create a huge potential of issues to wade through. 
+CORRECT PREDICTION. The model is correctly assess the narrative as an equipment problem. Additionally one can see how the combination of anomaly selections can create a huge potential of issues to wade through. Given he 'critical' and 'less severe' tags in the anomaly cluster, this illustrates how professional finetuning and labeling would help this system.
 ___
 example 2 - Inference at narrative index 55 (```a3_main.py -po 55```):
 ```
@@ -61,7 +61,7 @@ Anomaly samples from cluster '5' - the prediction:
 * inflight event, encounter weather, turbulence. inflight event, encounter unstabilized approach. inflight event, encounter cftt, cfit.
 * ground event, encounter other, unknown.
 
-The model has predicted that the issue occured in flight - which is a correct assumption. The mis-categorization could be a result of the somewhat cross-correlated anomaly sets. This illustrates the potential of anomaly selections that are 'different but the same' and highlights the potential of a method for distilling categories from the narratives themselves.
+INCORRECT PREDICTION. The model has predicted that the issue occured in flight - which is a correct assumption. The mis-categorization could be a result of the somewhat cross-correlated anomaly sets. This illustrates the possibility of anomaly selections that are 'different but the same' and highlights the potential of a method for distilling categories from the narratives themselves.
 
 ## Testing:
 With 15 potential class choices, a purely random selection would yield a 6.6% success rate. This model, fine-tuned with only 3 epochs due to time and hardware constraints, has a roughly 54% accuracy, showing a strong diagonal in the confusion matrix. The training loss curve indicates that there is still room to train and improve the accuracy of them model. Also displayed here is a 3D visualization of the anomaly clusters.
