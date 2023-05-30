@@ -1,3 +1,10 @@
+####################################################################################################
+# This script is used to rebuild the encodings for the ASRS dataset using the huggingface datasets
+# preprocess_function is used to tokenize the text and rebuild the encodings
+# rebuild_encodings() is used to load the data and rebuild the encodings
+# The encodings are stored in the PICKLE_DATA folder
+
+
 from transformers import AutoTokenizer
 from datasets import Dataset, Features, Value, ClassLabel
 

@@ -15,11 +15,16 @@ def main(args):
 
     elif args.predict_one:
         print('*'*10, ' Predict One ', '*'*10)
-        infer_one()
+        pred_idx = int(args.predict_one)
+        if args.predict_one == -1:
+            infer_one()
+        else:
+            infer_one(pred_idx)
         
     elif args.predict_many:
-        print('*'*10, ' Predict Many ', '*'*10)
-        infer_many(args.predict_many)
+        print('*'*10, ' Predicting {0} Narratives '.format(args.predict_many), '*'*10)
+        pred_count = int(args.predict_many)
+        infer_many(pred_count)
 
 
 def print_dict(data_dict):
@@ -32,15 +37,16 @@ def print_dict(data_dict):
         print()
         print()
 
+
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description='CS614 Assignment 3 - Language Classifier')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('-d', '--test_dataset', 
                         action='store_true', help='View a randomly selected data member from the Test Dataset')
-    group.add_argument('-po', '--predict_one',
-                        action='store_true', help='Predict one randomly selected narrative')
-    group.add_argument('-pm', '--predict_many', const=10,
-                        action='store_const', help='Predict many randomly selected narratives')
+    group.add_argument('-po', '--predict_one', nargs='?', const='-1',
+                        action='store', help='Given no index number, predict a random narrative. Given an index number, predict that narrative.')
+    group.add_argument('-pm', '--predict_many', const='10', nargs='?',
+                        action='store', help='Predict many randomly selected narratives')
     
     try:
         args = parser.parse_args()

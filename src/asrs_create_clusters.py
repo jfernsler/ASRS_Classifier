@@ -1,3 +1,9 @@
+####################################################################################################
+# This script is used to create the clusters for the ASRS dataset
+#    First embeddings are created for each anomaly using the encoder model
+#    Then the clustering model is used to create the clusters
+#    Then the clusters are visualized using the TSNE algorithm
+
 from sklearn.model_selection import train_test_split
 import pandas as pd
 import numpy as np

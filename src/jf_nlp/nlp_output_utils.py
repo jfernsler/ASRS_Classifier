@@ -25,7 +25,7 @@ def plot_cluster_counts(asrs_data, name='cluster_counts', show=False):
         plt.show()
 
 
-def make_matrix(y_true, y_pred, classes, title, figure_path):
+def make_matrix(y_true, y_pred, classes, title, figure_path, save=True):
     """Makes a confusion matrix from the given data."""
     cf_matrix = confusion_matrix(y_true, y_pred)
     df_cm = pd.DataFrame(cf_matrix / np.sum(cf_matrix, axis=1)[:, None],
@@ -36,10 +36,13 @@ def make_matrix(y_true, y_pred, classes, title, figure_path):
     plt.title(title)
     hm = sn.heatmap(df_cm, annot=True, linewidths=.5, cmap='plasma', fmt='.2f', linecolor='grey')
     hm.set(xlabel='Predicted', ylabel='Truth')
-    plt.savefig(figure_path, dpi=300, bbox_inches="tight")
+    if save:
+        plt.savefig(figure_path, dpi=300, bbox_inches="tight")
+    else:
+        plt.show()
 
 
-def print_results(index, text, y, yhat, confidence):
+def print_results(index, text, y, yhat, confidence, data=None):
     """Prints the results of a single inference."""
     print('\n', '='*80)
     print('\nNarrative at index {}:\n'.format(index), text)

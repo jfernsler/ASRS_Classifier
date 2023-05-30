@@ -1,4 +1,11 @@
-from transformers import pipeline
+####################################################################################################
+# This script is used to infer the sentiment of ASRS narratives.
+# infer_one() will predict a single narrative, either randomly selected or specified by index.
+# infer_many() will predict a number of randomly selected narratives.
+#
+# The model and tokenizer are fetched from HuggingFace.
+
+from transformers import pipeline, AutoModelForSequenceClassification, AutoTokenizer
 
 from jf_nlp.nlp_dataloaders import ASRSTestLoader
 from jf_nlp.nlp_output_utils import make_matrix, print_results
@@ -7,12 +14,15 @@ from jf_nlp.nlp_globals import *
 import os, random
 
 def infer_many(count = 10, display = True, chart = False, checkpoint=MODEL_BEST_CHECKPOINT):
-    """Infer many randomly selected narratives."""
+    """Infer many randomly selected narratives.
+        fine-tuned Model and Tokenizer fetched from HuggingFace"""
     asrs = ASRSTestLoader()
     idx_list = random.sample(range(len(asrs)), count)
 
-    model_path = os.path.join(MODEL_PATH_TUNED, 'checkpoint-{}'.format(checkpoint))
-    classifier = pipeline("sentiment-analysis", model=model_path)
+    model = AutoModelForSequenceClassification.from_pretrained("jfernsler/ASRS_distilbert-base-uncased")
+    tokenizer = AutoTokenizer.from_pretrained("jfernsler/ASRS_distilbert-base-uncased")
+
+    classifier = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
 
     y_list = list()
     yhat_list = list()
@@ -58,11 +68,14 @@ def infer_many(count = 10, display = True, chart = False, checkpoint=MODEL_BEST_
 
 
 def infer_one(idx=None, checkpoint=MODEL_BEST_CHECKPOINT):
-    """Infer a single narrative."""
+    """Infer a single narrative.
+        fine-tuned Model and Tokenizer fetched from HuggingFace"""
     asrs = ASRSTestLoader()
 
-    model_path = os.path.join(MODEL_PATH_TUNED, 'checkpoint-{}'.format(checkpoint))
-    classifier = pipeline("sentiment-analysis", model=model_path)
+    model = AutoModelForSequenceClassification.from_pretrained("jfernsler/ASRS_distilbert-base-uncased")
+    tokenizer = AutoTokenizer.from_pretrained("jfernsler/ASRS_distilbert-base-uncased")
+
+    classifier = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
 
     if idx is None:
         idx = random.randrange(len(asrs))
@@ -71,8 +84,7 @@ def infer_one(idx=None, checkpoint=MODEL_BEST_CHECKPOINT):
     result = classifier(element['text'], padding=True, truncation=True, max_length=512)
     print_results(idx, element['text'], int(element['label']), int(result[0]['label']), result[0]['score'])
 
-    
 
 if __name__ == '__main__':
-    infer_many(20)
-    #infer_one()
+    #infer_many(20)
+    infer_one()

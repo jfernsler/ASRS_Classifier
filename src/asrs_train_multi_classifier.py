@@ -1,3 +1,9 @@
+################################################################################
+# This is where the fine-tuning happens.
+# The model is trained on the ASRS dataset
+# The model is then saved to the MODEL folder
+# train() is the main function
+
 from jf_nlp.nlp_globals import *
 from jf_nlp.utils import pickle_unzip
 

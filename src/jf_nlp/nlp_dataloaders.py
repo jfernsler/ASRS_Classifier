@@ -17,7 +17,15 @@ class ASRSRawLoader():
             return
 
         keepers = ['ACN', 'Year', 'Month', 'Flight Phase', 'Reporter Organization', 'Anomaly', 'Narrative']
-        self.data = pd.read_csv(ASRS_RAW_DATA, usecols=keepers)
+
+        if os.path.exists(ASRS_RAW_DATA):
+            self.data = pd.read_csv(ASRS_RAW_DATA, usecols=keepers)
+        else:
+            print('ASRS Raw Data not found at {}'.format(ASRS_RAW_DATA))
+            print('Please download the data from https://www.kaggle.com/datasets/andrewda/aviation-safety-reporting-system')
+            print('and place it in the data folder.')
+            return
+        
         self.data.dropna(inplace=True)
 
         self.data['Narrative'] = self.data['Narrative'].str.lower()
