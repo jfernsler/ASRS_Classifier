@@ -4,13 +4,13 @@ ___
 Aviation Safety Reporting Sytem (ASRS) logs are filed for every incident that could occur during a flight and can be filed by any member of the crew - these human generated reports contain a vast number of optional combinations of anomalies as well as a written narrative describing the event. The dense reports could be narrowed down to fewer categories to allow them to be addressed in a more meaningful order and place resources on issues which require more attention earlier. I propose a classification system based on the narrative and clustered by anomaly types with the aim to decouple the reporting methods - this proof of concept show the potential of this process and could further benefit from more input from professionals to craft and prioritize anomaly sets for more clarity.
 
 ## Data source:
-This project uses an ASRS dataset from kaggle found here: https://www.kaggle.com/datasets/andrewda/aviation-safety-reporting-system. This 580+Mb csv file contains over 250,000 reports which was reduced to 125,000 by using only reports from the year 2000-2022. Code was written to create text embeddings from the 40,000+ unique anomaly reports and clusted into 15 classes, which were named 0-15 (professional guidedence would help refine and name these clusters), all class numbers were then paired with the narratives for training and evaluation.
+This project uses an ASRS dataset from kaggle found here: https://www.kaggle.com/datasets/andrewda/aviation-safety-reporting-system. This 580+Mb csv file contains over 250,000 reports which was reduced to 125,000 by using only reports from the year 2000-2022. Code was written to create text embeddings from the 40,000+ unique anomaly reports and clusted into 15 classes (although 15 is a somewhat arbitrary value, it yielded better clustering than some other options and additional future work would allow for professional guidedence to help refine and name these clusters), all class numbers were then paired with the narratives for training and evaluation.
 
 ## Model and data justification:
-The distilBERT model was chosen for it's size and speed for this task. It was used for both the anomaly embedding generation as well as being fine-tuned for the classification task where the narrative was used as input. The final tuned model was uploaded to the huggingface.co hub here: https://huggingface.co/jfernsler/ASRS_distilbert-base-uncased
+The distilBERT model was chosen for it's size and speed - it's also well suited for multi-label classification. It was used for both the anomaly embedding generation as well as being fine-tuned for the classification task where the narrative was used as input. The final tuned model was uploaded to the huggingface.co hub here: https://huggingface.co/jfernsler/ASRS_distilbert-base-uncased
 
 ## Commented examples:
-example 1 - Inference at narrative index 123:
+example 1 - Inference at narrative index 123 (```a3_main.py -po 123```):
 ```
 Narrative at index 123:
  on may/mon/04, given job case 32-96-50 to replace #2 tire. removed and replaced tire, torqued and spun tire. installed lock screws and safetied.
@@ -31,7 +31,7 @@ Here the narrative is being correctly assesed into the anomaly cluster '7'. Here
 
 The model is correctly assess the narrative as an equipment problem. Additionally one can see how the combination of anomaly selections can create a huge potential of issues to wade through. 
 ___
-example 2 - Inference at narrative index 55:
+example 2 - Inference at narrative index 55 (```a3_main.py -po 55```):
 ```
 Narrative at index 55:
  first officer was on base leg to btv and descending to traffic pattern altitude (tpa) of 1;800 ft msl when passing through 2;000 ft msl, the egpws 'terrain' aural alert was issued. the first officer stopped the descent and initiated a shallow climb to clear the aural alert, leveled momentarily, then resumed the scheduled descent to the field with no further incident. both the captain and first officer verified that no terrain on the mfd was in conflict with the aircraft and a visual check of the surrounding terrain was verified. no further alerts were issued and the approach was completed per normal company profile.
@@ -48,10 +48,10 @@ Anomaly samples from cluster '5' - the prediction:
 * inflight event, encounter weather, turbulence. inflight event, encounter unstabilized approach. inflight event, encounter cftt, cfit.
 * ground event, encounter other, unknown.
 
-The model has predicted that the issue occured in flight - which is a correct assumption. The mis-categorization could a result of the somewhat cross-correlated anomaly sets. This illustrates the potential for similar anomaly selections and highlights the potential of a method for distilling categories from the narratives themselves.
+The model has predicted that the issue occured in flight - which is a correct assumption. The mis-categorization could be a result of the somewhat cross-correlated anomaly sets. This illustrates the potential of anomaly selections that are 'different but the same' and highlights the potential of a method for distilling categories from the narratives themselves.
 
 ## Testing:
-With 15 potential class choices, a purely random selection would yield a 6.6% success rate. This model, fine-tuned with only 3 epochs due to time and hardware constraints, has a roughly 54% accuracy, showing a strong diagonal in the confusion matrix. The training loss curve indicates that there is still room to train and improve the accuracy of them model. 
+With 15 potential class choices, a purely random selection would yield a 6.6% success rate. This model, fine-tuned with only 3 epochs due to time and hardware constraints, has a roughly 54% accuracy, showing a strong diagonal in the confusion matrix. The training loss curve indicates that there is still room to train and improve the accuracy of them model. Also displayed here is a 3D visualization of the anomaly clusters.
 
 ## Code and instructions to run it:
 The code and a reduced dataset can be cloned from: 
