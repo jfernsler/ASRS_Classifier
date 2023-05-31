@@ -84,7 +84,6 @@ Once cloned, the primary script to run is a3_main.py. Run this script with one o
 Please note, the trained model has been placed into the huggingface.co hub (https://huggingface.co/jfernsler/ASRS_distilbert-base-uncased) and *should* automatically download when the inference is first run. The model size is roughly 280Mb. 
 
 ## Additional Information
-* This submission may be shared with others
 * ```data_out/cluster_samples.txt``` contains anomaly samples from each cluster.
 * To run training several steps must be taken:
     * the original asrs data must be downloaded and placed in the data folder as ```asrs.csv```
