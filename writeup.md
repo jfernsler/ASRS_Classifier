@@ -1,13 +1,13 @@
 ___
 
 ## Pitch: 
-Aviation Safety Reporting Sytem (ASRS) logs are filed for every incident that could occur during a flight and can be filed by any member of the crew - these human generated reports contain a vast number of optional combinations of anomalies as well as a written narrative describing the event. The dense reports could be narrowed down to fewer categories to allow them to be addressed in a more meaningful order and place resources on issues which require more attention earlier. I propose a classification system based on the narrative and clustered by anomaly types with the aim to decouple the reporting methods - this proof of concept show the potential of this process and could further benefit from more input from professionals to craft and prioritize anomaly sets for more clarity.
+Aviation Safety Reporting System (ASRS) logs are filed for every incident that could occur during a flight and can be filed by any member of the crew - these human generated reports contain a vast number of optional combinations of anomalies as well as a written narrative describing the event. The dense reports could be narrowed down to fewer categories to allow them to be addressed in a more meaningful order and place resources on issues which require more attention earlier. I propose a classification system based on the narrative and clustered by anomaly types with the aim to decouple the reporting methods - this proof of concept show the potential of this process and could further benefit from more input from professionals to craft and prioritize anomaly sets for more clarity.
 
 ## Data source:
 This project uses an ASRS dataset from kaggle found here: https://www.kaggle.com/datasets/andrewda/aviation-safety-reporting-system. This 580+Mb csv file contains over 250,000 reports which was reduced to 125,000 by using only reports from the year 2000-2022. Code was written to create text embeddings from the 40,000+ unique anomaly reports and clusted into 15 classes (although 15 is a somewhat arbitrary value, it yielded better clustering than some other options and additional future work would allow for professional guidedence to help refine and name these clusters), all class numbers were then paired with the narratives for training and evaluation.
 
 ## Model and data justification:
-The distilBERT model was chosen for it's size and speed - it's also well suited for multi-label classification. It was used for both the anomaly embedding generation as well as being fine-tuned for the classification task where the narrative was used as input. The final tuned model was uploaded to the huggingface.co hub here: https://huggingface.co/jfernsler/ASRS_distilbert-base-uncased
+A smaller version of a BERT model was chosen (distilBERT) in order to leverage its excellent contextual understanding of text and its strength in multi-label classification. It was used for both the anomaly embedding generation as well as being fine-tuned for the classification task where the narrative was used as input. The final tuned model was uploaded to the huggingface.co hub here:  https://huggingface.co/jfernsler/ASRS_distilbert-base-uncased
 
 ## Commented examples:
 example 1 - Inference at narrative index 123 (```a3_main.py -po 123```):
@@ -33,7 +33,7 @@ Here the narrative is being correctly assesed into the anomaly cluster '7'. Here
 * aircraft equipment problem critical. deviation, discrepancy - procedural far. deviation, discrepancy - procedural maintenance. deviation, discrepancy - procedural published material, policy.
 * aircraft equipment problem less severe. deviation - altitude crossing restriction not met. deviation - altitude undershoot. deviation, discrepancy - procedural published material, policy. deviation, discrepancy - procedural mel, cdl. deviation, discrepancy - procedural far. deviation, discrepancy - procedural clearance. inflight event, encounter weather, turbulence. other exp lvl tech flying
 
-CORRECT PREDICTION. The model is correctly assess the narrative as an equipment problem. Additionally one can see how the combination of anomaly selections can create a huge potential of issues to wade through. Given he 'critical' and 'less severe' tags in the anomaly cluster, this illustrates how professional finetuning and labeling would help this system.
+_CORRECT PREDICTION_. The model is correctly assess the narrative as an equipment problem. Additionally one can see how the combination of anomaly selections can create a huge potential of issues to wade through. Given he 'critical' and 'less severe' tags in the anomaly cluster, this illustrates how professional finetuning and labeling would help this system.
 ___
 example 2 - Inference at narrative index 55 (```a3_main.py -po 55```):
 ```
@@ -61,7 +61,7 @@ Anomaly samples from cluster '5' - the prediction:
 * inflight event, encounter weather, turbulence. inflight event, encounter unstabilized approach. inflight event, encounter cftt, cfit.
 * ground event, encounter other, unknown.
 
-INCORRECT PREDICTION. The model has predicted that the issue occured in flight - which is a correct assumption. The mis-categorization could be a result of the somewhat cross-correlated anomaly sets. This illustrates the possibility of anomaly selections that are 'different but the same' and highlights the potential of a method for distilling categories from the narratives themselves.
+_INCORRECT PREDICTION_. The model has predicted that the issue occured in flight - which is a correct assumption. The mis-categorization could be a result of the somewhat cross-correlated anomaly sets. This illustrates the possibility of anomaly selections that are 'different but the same' and highlights the potential of a method for distilling categories from the narratives themselves.
 
 ## Testing:
 With 15 potential class choices, a purely random selection would yield a 6.6% success rate. This model, fine-tuned with only 3 epochs due to time and hardware constraints, has a roughly 54% accuracy, showing a strong diagonal in the confusion matrix. The training loss curve indicates that there is still room to train and improve the accuracy of them model. Also displayed here is a 3D visualization of the anomaly clusters.
