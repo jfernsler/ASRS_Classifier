@@ -66,6 +66,8 @@ _INCORRECT PREDICTION_. The model has predicted that the issue occured in flight
 ## Testing:
 With 15 potential class choices, a purely random selection would yield a 6.6% success rate. This model, fine-tuned with only 3 epochs due to time and hardware constraints, has a roughly 54% accuracy, showing a strong diagonal in the confusion matrix. The training loss curve indicates that there is still room to train and improve the accuracy of them model. Also displayed here is a 3D visualization of the anomaly clusters.
 
+![Charts from testing](charts/collected_charts.png)
+
 ## Code and instructions to run it:
 The code and a reduced dataset can be cloned from: 
 * https://github.com/jfernsler/ASRS_Classifier
